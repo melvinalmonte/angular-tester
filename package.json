@@ -6,13 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
-    }
+    "test": "ng test --no-watch --code-coverage",
+    "setup_app": "npm install && husky install",
+    "prettify": "pretty-quick --staged"
   },
   "private": true,
   "dependencies": {
