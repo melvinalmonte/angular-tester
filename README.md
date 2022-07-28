@@ -2,6 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
+## Pre-commit hooks
+
+Install husky to orchestrate pre-commit actions.
+
+`npm install -D husky`
+
+add prepare script to set up husky directory
+
+`npm set-script prepare "husky install"`
+
+run `npm run prepare` to setup husky.
+
+To add a new hook run `npx husky add .husky/pre-commit "your npm run script goes here"`
+
+For example, to add unit tests before each commit you write the command will go as follow
+
+`npx husky add .husky/pre-commit "npm test"`
+
+now before any commit `npm test` will run.
+
+Additionally if you take a look at `package.json` line 10, the `setup_app` will install the needed dependencies and will setup husky.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
